@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if [ -n "$( find $1 -maxdepth 3 -iname server.fsx )" ]; then
+  echo "Simple .NET Core 3 Web server" && exit 0
+else
+  echo "no" && exit 1
+fi
